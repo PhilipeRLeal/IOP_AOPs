@@ -12,9 +12,11 @@ pd.set_option('display.max_columns', 5000)
 
 
 # Water absorption table extracted from:
+# (Robin M. Pope; Edward S. Fry, 1997):
+# URL: https://www.osapublishing.org/DirectPDFAccess/
+# 	   BE6131FA-0E21-9292-F299EE514F22E4E5_63107/
+#      ao-36-33-8710.pdf?da=1&id=63107&seq=0&mobile=no
 
-    # (Robin M. Pope; Edward S. Fry, 1997): https://www.osapublishing.org/DirectPDFAccess/BE6131FA-0E21-9292-F299EE514F22E4E5_63107/ao-36-33-8710.pdf?da=1&id=63107&seq=0&mobile=no
-    
 Aw = '''380.0 0.01137 0.0016 14
 382.5 0.01044 0.0015 15
 385.0 0.00941 0.0011 13
@@ -143,7 +145,7 @@ Aw = '''380.0 0.01137 0.0016 14
 692.5 0.538 0.007 3'''
 
 
-Aw = pd.Series(Aw.split('\n') )
+Aw = pd.Series(Aw.split('\n'))
 
 Aw = Aw.str.split(' ').apply(pd.Series).dropna()
 
