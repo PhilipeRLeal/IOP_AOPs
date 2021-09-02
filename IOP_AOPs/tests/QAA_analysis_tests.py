@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from IOP_AOPs.QAA_analysis import apply_QAA
+from .IOP_AOPs.QAA_analysis import apply_QAA
 
 
 
