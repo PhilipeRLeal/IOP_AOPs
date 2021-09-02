@@ -1,5 +1,8 @@
 name: Pylint
 
+disable=
+    C0114 # missing-module-docstring
+
 on: [push]
 
 jobs:
