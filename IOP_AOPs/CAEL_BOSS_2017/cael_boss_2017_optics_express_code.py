@@ -6,10 +6,8 @@ Created on Thu Mar  8 15:53:33 2018
 """
 
 import numpy as np
-
 from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
-
 
 
 l = np.linspace(300, 700, 701-300, dtype=float) # wavelenths sampled
