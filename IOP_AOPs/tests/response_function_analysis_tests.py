@@ -3,13 +3,18 @@ import seaborn as sns
 
 from IOP_AOPs import spectral_response_functions as SRF
 
-from SRF.OLI_response_function_analysis import central_wavelength_function
+from SRF.response_function_analysis import central_wavelength_function
 del SRF
 
 
 def get_OLI_response_data():
+    """
+    Basic function for acquisition of the OLI data
+    to be applied by the 'test_response_function'
 
-    filepath = r'IOP_AOPs/Spectral Response Functions/data/Ball_BA_RSR.v1.xlsx'
+    """
+
+    filepath = r'data/Ball_BA_RSR.v1.xlsx'
 
     all_dfs = pd.read_excel(filepath, sheet_name=None)
 
@@ -42,7 +47,12 @@ def get_OLI_response_data():
     return df, General
 
 
-def test_OLI_response_functions():
+def test_response_function():
+    """
+    This is a test for the central_wavelength_function
+    by means of the OLI remote sensor response function.
+
+    """
 
     try:
 

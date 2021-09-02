@@ -5,6 +5,10 @@ from .IOP_AOPs.QAA_analysis import apply_QAA
 
 
 def test_apply_QAA():
+    """
+    This is a function to evaluate the QAA algorithm
+    
+    """
     try:
         N_samples = 10
 

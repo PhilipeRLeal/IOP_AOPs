@@ -62,7 +62,7 @@ setup(name='IOP_AOPs',
           'Programming Language :: Python :: 3.7',
       ],
 
-      keywords="fancy spatial plot, geopanda, xarray, matplotlib",
+      keywords="'Water colour', 'IOP', 'AOP', 'remote sensing' ",
 
       description='This is a python package containing several algorithms for  \
                  acquisition of Optical Properties of water bodies by means \
@@ -86,9 +86,9 @@ setup(name='IOP_AOPs',
       package_dir={'': 'IOP_AOPs'},
 
       # TODO: add example data
-      # include_package_data=True,
-      # package_data={'IOP_AOPs/tests/Data_example':
-      # ['Data_example/MUNICIPIOS*']},
+      include_package_data=True,
+      package_data={'IOP_AOPs/data':
+                    ['data/Espectros_Ma_Mh_TF.xlsx']},
 
       # Testers:
 
@@ -96,8 +96,6 @@ setup(name='IOP_AOPs',
       tests_require=['nose'],
 
       url='https://github.com/PhilipeRLeal/IOP_AOPs.git',
-
-      # download_url='TODO',
 
       zip_safe=False,
       )

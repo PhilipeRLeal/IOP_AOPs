@@ -4,9 +4,9 @@
 # See COPYING and COPYING.LESSER in the root of the repository for full
 # licensing details.
 
+"""
+Keys in the config dictionary:
+
+	- cael_boss_2017_optics_express_code
 
 """
-main init module for storing the version of the package
-"""
-
-__version__ = '0.1'

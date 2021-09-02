@@ -1,4 +1,11 @@
+# Copyright IOP_AOPs Contributors
+#
+# This file is part of IOP_AOPs and is released under the MIT license.
+# See COPYING and COPYING.LESSER in the root of the repository for full
+# licensing details.
 
+
+# Code based on
 # link> http://www.ioccg.org/groups/Software_OCA/QAA_v6_2014209.pdf
 # QAA-V6
 
@@ -6,7 +13,7 @@
 import numpy as np
 import pandas as pd
 
-from dependencies.aw_POPE_FRY_1996 import Aw
+from IOPs_AOPs.data.aw_POPE_FRY_1996 import Aw
 
 
 def get_bbw_lambda(lambda_nm=412, verbose=True):
@@ -401,22 +408,3 @@ def apply_QAA(Rrs_Data,
             'adg_lambda': adg_lambda,
             'ag_lambda': ag_lambda,
             'bbp_lambda': bbp_lambda}
-
-
-if '__main__' == __name__:
-
-    N_samples = 10
-
-    Bandas = [412, 443, 489, 510, 555, 670]
-
-    Random_data = np.random.randint(
-        low=0, high=800, size=(N_samples, len(Bandas))) / 1000
-
-    Rrs_Data = pd.DataFrame(Random_data, columns=Bandas)
-
-    Rrs_Data.head()
-
-    QAA_Results = apply_QAA(Rrs_Data)
-
-    for k, v in QAA_Results.items():
-        print(str(k), '\n' * 3, '-' * 50, '\n', v, '\n' * 3)
